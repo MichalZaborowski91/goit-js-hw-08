@@ -1,5 +1,5 @@
 {
-  "name": "parcel-project-template",
+  "name": "goit-js-hw-08",
   "version": "2.0.0",
   "description": "",
   "homepage": "https://michalzaborowski91.github.io/goit-js-hw-08/",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/MichalZaborowski91/goit-js-hw-08.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Michal Zaborowski <mkzaborowski@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MichalZaborowski91/goit-js-hw-08/issues"
