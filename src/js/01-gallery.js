@@ -16,7 +16,7 @@ function createGallery(items) {
     .join('');
 }
 gallery.innerHTML = createGallery(galleryItems);
-gallery.style.listStyle = 'none';
+gallery.style.listStyle = 'none'; //removing list style
 //Vanilla JavaScript Plugin
 const lightbox = new SimpleLightbox('.gallery a', {
   //Options
