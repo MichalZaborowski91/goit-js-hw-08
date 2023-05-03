@@ -11,15 +11,6 @@ form.addEventListener('submit', submitForm);
 let dataForm = {};
 checkStorage();
 
-function saveFormInput() {
-  const dataInput = {
-    email: emailInput.value,
-    message: messageInput.value,
-  };
-  localStorage.setItem('feedback-form-state', JSON.stringify(dataInput));
-  dataForm = dataInput;
-}
-
 function submitForm(event) {
   event.preventDefault();
   if (!event.target.email.value || !event.target.message.value) {
@@ -29,6 +20,15 @@ function submitForm(event) {
   event.target.reset();
   console.log(dataForm);
   localStorage.removeItem('feedback-form-state');
+}
+
+function saveFormInput() {
+  const dataInput = {
+    email: emailInput.value,
+    message: messageInput.value,
+  };
+  localStorage.setItem('feedback-form-state', JSON.stringify(dataInput));
+  dataForm = dataInput;
 }
 
 function checkStorage() {
