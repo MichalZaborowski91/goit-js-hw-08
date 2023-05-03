@@ -9,6 +9,7 @@ form.addEventListener('input', throttle(saveFormInput, 500));
 form.addEventListener('submit', submitForm);
 
 let dataForm = {};
+checkStorage();
 
 function saveFormInput() {
   const dataInput = {
@@ -28,4 +29,16 @@ function submitForm(event) {
   event.target.reset();
   console.log(dataForm);
   localStorage.removeItem('feedback-form-state');
+}
+
+function checkStorage() {
+  const loadCheckedStorae = JSON.parse(
+    localStorage.getItem('feedback-form-state')
+  );
+  if (!loadCheckedStorae) {
+    return;
+  }
+  dataForm = loadCheckedStorae;
+  form.email.value = dataForm.email || '';
+  form.message.value = dataForm.message || '';
 }
